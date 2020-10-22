@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.3/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap"
+      rel="stylesheet"
+    />
+    <title>Personal Finance</title>
+    <script
+      src="https://kit.fontawesome.com/a41e9403cf.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <i
+        class="fas fa-money-check-alt"
+        style="color: white; padding-left: 5vh; padding-right: 5vh"
+      ></i>
+      <a class="navbar-brand" href="#">Personal Finance</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Hugo PAUL
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Disconnect</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row justify-content-md-center text-center" style="margin: 20px">
+        <div class="card text-center">
+          <div class="card-header">Welcome Hugo</div>
+          <div class="card-body">
+            <h5 class="card-title">Last Connexion: 18/10/2020</h5>
+            <p class="card-text" style="width: 50vh">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+              vitae impedit repellat eaque sunt aperiam
+            </p>
+          </div>
+        </div>
+        <div class="card text-center">
+          <div class="card-header">Quick overview</div>
+          <div class="card-body">
+            <h5 class="card-title">Current Asset: 634.000€</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fas fa-caret-up" style="color: green"></i>+34% WoW
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-caret-up" style="color: green"></i>+12% MoM
+              </li>
+              <li class="list-group-item">
+                <i class="fas fa-caret-down" style="color: red"></i>-21% YoY
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+
+    <div class="row justify-content-md-center text-center">
+      <div class="col-md-6">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne" style="height: 7vh; padding: 0vh">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Asset Trend Line
+                </button>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body"><canvas id="chLine"></canvas></div>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              class="card-header"
+              id="headingTwo"
+              style="height: 7vh; padding: 0vh"
+            >
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link"
+                  data-toggle="collapse"
+                  data-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Pie Chart
+                </button>
+              </h5>
+              <div class="card-body">
+                <canvas id="myChart" responsive="true" height="200vh"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="/javascripts/script.js"></script>
+
+    <footer class="bd-footer text-muted">
+      <div class="container-fluid p-3 p-md-5">
+        <p></p>
+      </div>
+    </footer>
+  </body>
+</html>
